@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis</title>
+</head>
+<body>
+    <h1>SELAMAT DATANG DI KUIZ HASAN</h1>
+    <button onclick="startQuiz()">Mulai Kuis</button>
+
+    <script>
+        var score = 0;
+
+        function askQuestion(question, correctAnswer) {
+            var userAnswer = prompt(question);
+            if (userAnswer && userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                score++;
+                alert("Benar! Skor Anda sekarang adalah: " + score);
+            } else {
+                alert("Salah. Skor Anda tetap: " + score);
+            }
+        }
+
+        function startQuiz() {
+            askQuestion("Apa ibukota Indonesia?", "Jakarta");
+            askQuestion("Berapa hasil dari 2 + 2?", "4");
+            askQuestion("Apa singkatan dari HTML?", "Hyper Text Markup Language");
+
+            alert("Kuis selesai! Skor Akhir Anda: " + score);
+        }
+    </script>
+</body>
+</html>
